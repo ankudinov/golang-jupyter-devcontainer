@@ -25,4 +25,14 @@ The devcontainer provided in this repository helps to address this requirements.
 
 ## Known Issues
 
-The Jupyter VSCode extension is not displaying notebook content when opening a codespace with a notebook on iPad (Safari) or in [`Blink SSH` app](https://blink.sh/).
+The Jupyter VSCode extension is not displaying notebook content when opening a codespace with a notebook on iPad (Safari) or in [`Blink SSH` app](https://blink.sh/).  
+
+In some rare cases similar issue can be observed on your laptop. In that case add following to the `.vscode > argv.json` in your project root directory:
+
+```json
+{
+    "disable-hardware-acceleration": true
+}
+```
+
+This workaround will not work on Codespaces.
